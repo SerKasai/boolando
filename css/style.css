@@ -17,14 +17,29 @@ header, section, footer {
     padding: 20px 0;
 }
 
+h4 {
+    font-size: small;
+}
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
 }
 
+.cards-wrapper {
+    font-size: 0;
+}
+
 .cards-wrapper .card {
     display: inline-block;
-    width: 30%;
+    width: 32%;
+    margin-bottom: 25px;
+    font-size: 16px;
+    margin-right: 2%;
+}
+
+.cards-wrapper .card:nth-child(3n) {
+    margin-right: 0;
 }
 
 .card .card__img-wrapper {
@@ -55,14 +70,41 @@ header, section, footer {
     top: 30px;
     text-align: center;
     line-height: 40px;
-
 }
 
+.card__badge-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+
+.card__badge-wrapper .badge{
+    color: white;
+    font-weight: bold;
+    padding: 4px 6px;
+    font-size: 12px;
+}
+
+.badge.badge--sale {
+    background-color: red;
+}
+.badge.badge--category {
+    background-color: green;
+}
+
+.new-price {
+    font-weight: bold;
+    color: red;
+}
+
+.delete-price {
+    text-decoration: line-through;
+}
 /* debug */
 
 .debug .container {
     border: 2px solid;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .debug .card {
     border: 1px dashed red;
